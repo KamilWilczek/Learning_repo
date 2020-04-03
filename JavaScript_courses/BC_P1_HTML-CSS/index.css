@@ -1,0 +1,96 @@
+body {
+    margin: 0; /* usunięcie marginesu tak, żeby body wypełniało całą stronę*/
+    /*padding: 0;*/
+    --main-color: #96B826;
+}
+/* tło navigation bar */
+nav {
+    background-color: var(--main-color);
+    color: white;
+}
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    list-style: none;
+    padding-top: 10px;
+    margin: 0;
+}
+nav ul li {
+    margin-bottom: 0;
+}
+/* edycja przycisku w navigation bar*/
+nav ul li button {
+    padding: 5px;
+    color: var(--main-color);
+    font-size: 16px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+/* edycja linków w navigation bar*/
+nav ul li a {
+    color: white; /* usuwam niebieski kolor z linków*/
+    text-decoration: none; /* usuwam podkreślenie z linków */
+    justify-content: center;
+}
+#banner {
+    width: 100%; /* ustawiam banner żeby wypełniał całą stronę */
+}
+article {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    background-color: #54504F;
+    color: white;
+}
+/* kolor nagłówków w article */
+article h2 {
+    color: var(--main-color);
+    margin-bottom: 10px; /* zmniejszenie dolnego marginu nagłówków */ 
+}
+.column {
+    padding: 30px;
+}
+#author {
+    margin-top: 100px; /* odsunięcie obrazka od góry */
+    background-image: url('assets/avatar.png'); /* dodanie obrazka jako tła */ 
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 100px; /* wielkość tła (obrazka) */
+    padding-left: 110px; /* odsunięcie od tła od lewej strony (czyli odsunie teskt) */
+}
+/* edycja viev more'a */
+article p a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+/* edycja 3 obrazków */
+#pictures {
+    display: grid; /* siatka */
+    grid-template-columns: auto auto auto; /* 3 kolumny */
+    justify-content: space-around; /* równe rozmieszczenie obrazków */
+    background-color:#f4f4f4; /* dopasowanie tła strony do tła obrazków */
+}
+footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 100px 30px 100px;
+}
+footer div {
+    padding: 20px;
+}
+footer h4 {
+    font-size: 15px;
+    margin: 10px 0 0 0;
+}
+footer p {
+    font-size: 10px;
+    margin: 0;
+}
+footer h4 i {
+    font-size: 25px;
+}

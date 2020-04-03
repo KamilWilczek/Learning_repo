@@ -1,0 +1,12 @@
+<h3>
+    Click on a movie to show details
+</h3>
+
+<!-- *ngFor='let movie of movies;' pętla for w Angular-->
+
+<div class="movie" 
+*ngFor='let movie of movies;'
+routerLink='movie/{{movie.id}}'> <!--  routerLink do url localhost:4200 bedzie dodawac ID filmu movie/{{movie.id}}-->
+    <img src="assets/{{movie.title | lowercase}}.jpg" width="100"/> <!-- z pętli pobierane sę tytuły filmów (title: 'Titanic') i stosowany jest pipe lowercase, żeby tytuły przerabiał na małe litery bo obrazki podpisane są z małej ('titanic.jpg') a w zmiennej jest z dużej-->
+</div>
+

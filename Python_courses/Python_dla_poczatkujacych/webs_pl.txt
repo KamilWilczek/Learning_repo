@@ -1,0 +1,3 @@
+goggle.pl
+wp.pl
+mbank.pl

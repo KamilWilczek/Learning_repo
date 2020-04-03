@@ -1,0 +1,46 @@
+/*
+yellow: #FFF700;
+green: #299617;
+blue: #5DADEC;
+violet: #9C51B6;
+red: #FF3855;
+brown: #A83731;
+*/
+h1 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 60px;
+    transform: rotate(-10deg);
+}
+.cup {
+    width: 200px;
+    height: 200px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 0 0 20px 20px;
+    cursor: pointer;
+    float: left;
+    margin: 20px;
+    background-size: 200% 200%;
+    background-image: linear-gradient(to top, #FFF700 50%, transparent 50%);
+    transition: background-position 1000ms;
+}
+.yellow {
+    background-image: linear-gradient(to top, #FFF700 50%, transparent 50%);
+}
+.green {
+    background-image: linear-gradient(to top, #299617 50%, transparent 50%);
+}
+.blue {
+    background-image: linear-gradient(to top, #5DADEC 50%, transparent 50%);
+}
+.violet {
+    background-image: linear-gradient(to top, #9C51B6 50%, transparent 50%);
+}
+.red {
+    background-image: linear-gradient(to top, #FF3855 50%, transparent 50%);
+}
+.brown {
+    background-image: linear-gradient(to top, #A83731 50%, transparent 50%);
+}

@@ -1,0 +1,5 @@
+goggle.pl
+wp.pl
+mbank.pl
+gmail.com
+boardgamegeek.com
