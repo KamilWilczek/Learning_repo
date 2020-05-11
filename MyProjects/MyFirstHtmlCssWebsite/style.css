@@ -1,0 +1,1390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+html {
+    font-family: 'oswald', arial, sans-serif;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    height: 50vh;
+    position: relative;
+    background-image: url("img/sad.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .2s linear;
+}
+
+header h1 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    left: 0;
+}
+
+.dots {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dots span {
+    display: inline-block;
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    margin: 0 7px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px white;
+}
+
+.dots span.active {
+    box-shadow: 0 0 0 2px white, 0 0 3px 4px darkred;
+}
+
+
+@media (orientation:portrait) and (min-width: 410px) {
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+@media (orientation:portrait) and (min-width: 768px) {
+    header h1 {
+        font-size: 34px;
+    }
+
+    .dots span {
+        width: 20px;
+        height: 20px;
+        box-shadow: 0 0 0 3px white;
+    }
+
+    .dots span.active {
+        box-shadow: 0 0 0 3px white, 0 0 3px 7px darkred;
+    }
+}
+
+@media (orientation:landscape) {
+    header {
+        height: 70vh;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 736px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .dots span {
+        width: 18px;
+        height: 18px;
+        box-shadow: 0 0 0 3px white;
+    }
+
+    .dots span.active {
+        box-shadow: 0 0 0 3px white, 0 0 3px 7px darkred;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    header h1 {
+        font-size: 35px;
+    }
+
+    .dots span {
+        width: 15px;
+        height: 15px;
+    }
+
+    .dots span.active {
+        box-shadow: 0 0 0 2px white, 0 0 3px 5px red;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    header {
+        background-position: center;
+    }
+
+    header h1 {
+        height: 70px;
+        font-size: 40px;
+        line-height: 70px;
+    }
+
+    .dots span {
+        width: 17px;
+        height: 17px;
+    }
+
+    .dots span.active {
+        box-shadow: 0 0 0 2px white, 0 0 3px 6px red;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1400px) {
+    header {
+        height: 70vh;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    header {
+        height: 80vh;
+    }
+}
+
+nav {
+    background-color: yellowgreen;
+    width: 100%;
+    height: 50vh;
+}
+
+nav ul {
+    margin: 0 auto;
+    list-style: none;
+    height: 100%;
+}
+
+nav ul li {
+    float: left;
+    width: 100%;
+}
+
+nav ul li:nth-child(6) {
+    margin-bottom: 5px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0px 5px;
+    margin: 2px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 40px;
+    color: black;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+nav ul li a.order {
+    height: 40px;
+    width: 250px;
+    line-height: 40px;
+    text-align: center;
+    border: 3px solid black;
+    margin: 0 auto;
+}
+
+nav ul li a i {
+    padding-right: 10px;
+    font-size: 24px;
+    vertical-align: -2px;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid white;
+}
+
+nav ul li a.order:hover {
+    background-color: white;
+    border: 3px solid white;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+    nav ul li a {
+        line-height: 8vh;
+    }
+}
+
+
+@media (orientation: portrait) and (min-width: 410px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    nav ul li a.order {
+        line-height: 200%;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    nav ul li a {
+        font-size: 35px;
+    }
+
+    nav ul li:nth-last-child(1) {
+        height: 85px;
+    }
+
+    nav ul li a.order {
+        width: 65%;
+        height: 70px;
+    }
+
+    nav ul li a i {
+        font-size: 35px;
+        vertical-align: 4px;
+    }
+}
+
+@media (orientation:landscape) {
+    nav {
+        height: auto;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    nav {
+        height: auto;
+    }
+
+    nav ul li {
+        width: auto;
+        margin-left: 210px;
+    }
+
+    nav ul li a {
+        /* width: 100%; */
+        width: 200px;
+        /* text-align: center; */
+        padding-left: 25px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 731px) {
+    nav {
+        height: auto;
+    }
+
+    nav ul li {
+        width: auto;
+        margin-left: 250px;
+    }
+
+    nav ul li:nth-last-child(1) {
+        height: 54px;
+    }
+
+    nav ul li a {
+        padding-top: 5px;
+        font-size: 30px;
+        width: 400px;
+        height: 50px;
+        padding-left: 10px;
+    }
+
+    nav ul li a i {
+        font-size: 30px;
+        vertical-align: 2px;
+        margin-right: 20px;
+    }
+
+    nav ul li a.order {
+        height: 52px;
+        line-height: 35px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    nav ul li {
+        margin-left: 2px;
+    }
+
+    nav ul li:nth-last-child(1) {
+        float: right;
+    }
+
+    nav ul li a {
+        padding: 10px 10px 0;
+        font-size: 14px;
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+
+    nav ul li a i {
+        font-size: 16px;
+        vertical-align: 2px;
+        margin-right: 0;
+    }
+
+    nav ul li a.order {
+        margin: 6px 0;
+        height: auto;
+        line-height: 30px;
+        margin-right: 30px;
+        padding: 6px 0;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    nav {
+        /* height: 60px; */
+        /* line-height: 40px; */
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 5px 15px;
+    }
+
+    nav ul li a i {
+        font-size: 18px;
+    }
+
+    nav ul li a.order {
+        margin: 6px 0;
+        height: auto;
+        line-height: 30px;
+        margin-right: 70px;
+        padding: 6px 0;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    nav {
+        height: 80px;
+    }
+
+    nav ul li {
+        margin-left: 30px;
+    }
+
+    nav ul li:nth-last-child(1) {
+        height: 64px;
+    }
+
+    nav ul li a {
+        padding: 15px 10px 0;
+        font-size: 24px;
+    }
+
+    nav ul li a i {
+        font-size: 24px;
+    }
+
+    nav ul li a.order {
+        margin: 8px 0;
+        height: auto;
+        line-height: 40px;
+        margin-right: 100px;
+        padding: px 0;
+    }
+}
+
+
+
+/* Aktualności */
+
+
+
+main {
+    max-width: 1280px;
+    border-bottom: 2px solid darkgreen;
+}
+
+main article h1 {
+    font-size: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px 10px;
+}
+
+main article img {
+    padding: 0 5px;
+    width: 100vw;
+}
+
+main article p {
+    padding: 5px 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+main article p a {
+    text-decoration: none;
+    color: darkgreen;
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+    main article h1 {
+        font-size: 20px;
+    }
+
+    main article p {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    main article h1 {
+        font-size: 26px;
+    }
+
+    main article p {
+        font-size: 24px;
+    }
+}
+
+@media (orientation: landscape) {
+    main article img {
+        width: 60vw;
+        transform: translateX(35%);
+    }
+
+    main article p {
+        margin: 5px 15px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    main article h1 {
+        font-size: 24px;
+    }
+
+    main article p {
+        margin: 5px 20px;
+        font-size: 18px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1280px;
+        margin: 0 auto;
+        border-bottom: 5px solid darkgreen;
+    }
+
+    main article {
+        /* element elastyczyny - zwartość dla flex main */
+        flex-grow: 1;
+        flex-basis: 50%;
+
+        /* kontener */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    main article h1 {
+        flex-grow: 1;
+        flex-basis: 100%;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 30px 0;
+        text-align: center;
+
+    }
+
+    main article img {
+        display: block;
+        width: 200px;
+        height: 150px;
+        margin-left: -60px;
+
+    }
+
+    main article p {
+        flex-grow: 2;
+        flex-basis: 0;
+        font-size: 16px;
+        margin-top: -8px;
+        padding-left: 60px;
+    }
+
+    main article p a {
+        text-decoration: none;
+        color: darkgreen;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    main article h1 {
+        font-size: 20px;
+    }
+
+    main article p {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    main article h1 {
+        font-size: 24px;
+    }
+
+    main article img {
+        display: block;
+        width: 250px;
+        height: 200px;
+        margin-left: -60px;
+
+    }
+
+    main article p {
+        font-size: 20px;
+        padding-left: 80px;
+    }
+}
+
+/* About */
+.about {
+    border-bottom: 2px solid darkgreen;
+}
+
+.about h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.about div img {
+    float: left;
+    width: 50%;
+    height: 50%;
+    margin: 8px 10px 0px 5px;
+}
+
+.about div p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 0 10px 10px;
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+    .about h1 {
+        font-size: 20px;
+    }
+
+    .about div p {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .about h1 {
+        font-size: 26px;
+    }
+
+    .about div img {
+        margin: 11px 10px 0px 5px;
+    }
+
+    .about div p {
+        font-size: 24px;
+        line-height: 39px
+    }
+}
+
+@media (orientation: landscape) {
+    .about div img {
+        width: 30%;
+        height: 30%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .about h1 {
+        font-size: 24px;
+    }
+
+    .about div img {
+        width: 30%;
+        height: 30%;
+        margin-top: 3px;
+    }
+
+    .about div p {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 731px) {
+    .about div p {
+        line-height: 29px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 812px) {
+    .about div img {
+        width: 25%;
+        height: 25%;
+    }
+
+    .about div p {
+        line-height: 36px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .about {
+        max-width: 1280px;
+        margin: 30px auto 0;
+        border-bottom: 5px solid darkgreen;
+    }
+
+    .about h1 {
+        font-size: 30px;
+        margin: 20px 0;
+    }
+
+    .about div {
+        display: flex;
+    }
+
+    .about div img {
+        width: 30%;
+        margin: 7px 0 40px 20px;
+    }
+
+    .about div p {
+        padding: 0px 50px;
+        font-size: 25px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    .about h1 {
+        font-size: 32px;
+    }
+
+    .about div p {
+        font-size: 30px;
+        line-height: 51px;
+    }
+}
+
+
+/* Gallery */
+.gallery {
+    border-bottom: 2px solid darkgreen;
+}
+
+.gallery h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.images a {
+    display: block;
+    text-align: center;
+}
+
+.images img {
+    width: 90vw;
+    margin: 10px 0;
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+    .gallery h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .gallery h1 {
+        margin-top: 20px;
+        font-size: 26px;
+    }
+
+}
+
+@media(orientation: landscape) {
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .images img {
+        margin-bottom: 20px;
+        width: 75%;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .gallery h1 {
+        font-size: 24px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .gallery {
+        border-bottom: 5px solid darkgreen;
+        padding-bottom: 20px;
+    }
+
+    .gallery h1 {
+        font-size: 30px;
+        margin: 20px 0;
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .images img {
+        min-width: 80%;
+        min-height: 80%;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    .gallery {
+        max-width: 1280px;
+        margin: 0 auto;
+        border-bottom: 5px solid darkgreen;
+        padding-bottom: 20px;
+    }
+
+    .gallery h1 {
+        font-size: 32px;
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .images img {
+        min-width: 80%;
+        min-height: 80%;
+    }
+}
+
+/* Agrotourism */
+.agrotourism {
+    border-bottom: 2px solid darkgreen;
+    padding-bottom: 10px;
+}
+
+.offer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img.agro {
+    /* margin-right: 5px;
+    margin-left: 5px; */
+    width: 45%;
+
+}
+
+.agrotourism h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.offer+p {
+    font-size: 14px;
+    margin: 10px 10px 10px;
+}
+
+.container {
+    border-bottom: 1px solid darkgreen;
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+    .agrotourism h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .offer+p {
+        font-size: 18px;
+        margin: 10px 10px 10px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .agrotourism h1 {
+        font-size: 26px;
+        margin: 20px 0;
+    }
+
+    .offer+p {
+        font-size: 24px;
+        margin: 10px 10px 10px;
+    }
+}
+
+@media (orientation: landscape) {
+    .offer+p {
+        margin: 10px 17px 10px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .agrotourism h1 {
+        font-size: 24px;
+    }
+
+    .offer+p {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 736px) {
+    .agrotourism h1 {
+        font-size: 26px;
+    }
+
+    .offer+p {
+        font-size: 24px;
+        margin: 10px 23px 10px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .agrotourism {
+        padding-bottom: 30px;
+    }
+
+    .agrotourism h1 {
+        font-size: 30px;
+        margin: 20px 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        padding-bottom: 20px;
+        border-bottom: 2px solid darkgreen;
+    }
+
+    .offer {
+        flex-basis: 30%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    img.agro {
+        flex-basis: 100%;
+        padding: 10px 20px 20px;
+    }
+
+    .offer+p {
+        flex-basis: 50%;
+        font-size: 22px;
+        margin: 0 10px 0 0;
+        padding: 5px 0;
+        line-height: 36px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    .agrotourism {
+        max-width: 1280px;
+        margin: 0 auto;
+        border-bottom: 5px solid darkgreen;
+        padding-bottom: 40px;
+    }
+
+    .agrotourism h1 {
+        font-size: 32px;
+        margin: 20px 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        padding-bottom: 10px;
+    }
+
+    .offer {
+        flex-basis: 30%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    img.agro {
+        flex-basis: 100%;
+        padding: 10px 20px 20px;
+    }
+
+    .offer+p {
+        flex-basis: 50%;
+        font-size: 26px;
+        margin: 0 10px 0 0;
+        padding: 5px 0;
+        line-height: 42px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1400px) {
+    .agrotourism h1 {
+        font-size: 34px;
+    }
+
+    .container {
+        padding-bottom: 30px;
+    }
+
+    .offer+p {
+        font-size: 28px;
+    }
+}
+
+
+/* Attractions */
+
+.attractions h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.attractions .pictures {
+    margin: 0 5px;
+}
+
+.attractions .pictures img {
+    width: 100%;
+}
+
+.attractions .description {
+    margin: 0 5px 5px;
+}
+
+.attractions .features:nth-child(odd) .description {
+    background-color: #f9fb61;
+}
+
+.attractions .features:nth-child(even) .description {
+    background-color: rgb(164, 226, 114);
+    ;
+}
+
+
+.attractions .description h3 {
+    width: 90%;
+    font-size: 14px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    margin-top: -10px;
+    padding-top: 10px;
+    text-indent: 20px;
+    border-bottom: 2px solid black;
+    text-transform: uppercase;
+}
+
+.attractions .description p {
+    font-size: 12px;
+    padding: 0px 20px 25px;
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+    .attractions h2 {
+        font-size: 18px;
+    }
+
+    .attractions .description h3 {
+        font-size: 16px;
+    }
+
+    .attractions .description p {
+        font-size: 16px;
+    }
+
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .attractions h2 {
+        font-size: 26px;
+    }
+
+    .attractions .description h3 {
+        font-size: 24px;
+    }
+
+    .attractions .description p {
+        font-size: 24px;
+    }
+}
+
+@media (orientation: landscape) {
+    .attractions h2 {
+        font-size: 20px;
+    }
+
+    .attractions .description h3 {
+        font-size: 18px;
+    }
+
+    .attractions .description p {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .attractions h2 {
+        font-size: 24px;
+    }
+
+    .attractions .description h3 {
+        font-size: 22px;
+    }
+
+    .attractions .description p {
+        font-size: 22px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .attractions h2 {
+        margin: 20px 0;
+    }
+
+    .attractions .features {
+        margin: 0 20px;
+        background-color: rgb(164, 226, 114);
+    }
+
+    .attractions .features:nth-child(odd) {
+        background-color: #f9fb61;
+    }
+
+    .attractions .pictures {
+        float: left;
+        width: 50%;
+        margin: 0;
+    }
+
+    .attractions .description {
+        float: left;
+        width: 50%;
+        margin: 0;
+    }
+
+    .features:nth-of-type(even) .pictures {
+        float: right;
+    }
+
+    .features:nth-of-type(even) .description {
+        float: right;
+        text-align: right;
+    }
+
+    .attractions .pictures img {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    .attractions .description h3 {
+        width: 70%;
+        font-size: 18px;
+        margin-bottom: 6px;
+        padding-bottom: 6px;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+
+    .features:nth-of-type(even) h3 {
+        float: right;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .attractions .description p {
+        padding-top: 10px;
+        font-size: 18px;
+        padding-left: 20px;
+        line-height: 200%;
+    }
+
+    .features:nth-of-type(even) p {
+        float: left;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    .attractions h2 {
+        font-size: 28px;
+        margin: 30px 0;
+    }
+
+    .attractions .description h3 {
+        font-size: 26px;
+    }
+
+    .attractions .description p {
+        font-size: 26px;
+    }
+}
+
+
+/* Contact */
+
+.contact {
+    margin: 20px auto;
+    /* background-color: rgb(203, 233, 119); */
+}
+
+.contact h1 {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+
+.wrap form {
+    text-align: center;
+}
+
+.wrap form input,
+.wrap form button,
+.wrap form textarea {
+    width: 80%;
+    margin-bottom: 25px;
+    border: 2px solid black;
+}
+
+.wrap form input {
+    height: 25px;
+    font-size: 12px;
+}
+
+.wrap form textarea {
+    height: 100px;
+    font-size: 12px;
+}
+
+.wrap form button {
+    line-height: 30px;
+    font-size: 14px;
+    background-color: green;
+    color: black;
+    border: 2px solid black;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.wrap .socials {
+    margin-left: 50%;
+    transform: translateX(-37%);
+}
+
+.wrap .socials p {
+    text-align: left;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.wrap .socials p i {
+    margin-right: 10px;
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+    .contact h1 {
+        font-size: 16px;
+    }
+
+    .wrap form input {
+        font-size: 14px;
+    }
+
+    .wrap form textarea {
+        font-size: 14px;
+    }
+
+    .wrap form button {
+        font-size: 16px;
+        line-height: 36px;
+    }
+
+    .wrap .socials p {
+        font-size: 16px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .contact h1 {
+        font-size: 28px;
+    }
+
+    .wrap form input {
+        font-size: 20px;
+        height: 40px;
+    }
+
+    .wrap form textarea {
+        font-size: 20px;
+        height: 140px;
+    }
+
+    .wrap form button {
+        font-size: 24px;
+        line-height: 48px;
+    }
+
+    .wrap .socials p {
+        font-size: 24px;
+    }
+}
+
+@media (orientation: landscape) and (min-width:640px) {
+    .contact h1 {
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+
+    .wrap form input {
+        font-size: 20px;
+        height: 30px;
+    }
+
+    .wrap form textarea {
+        font-size: 20px;
+        height: 100px;
+    }
+
+    .wrap form button {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+    .wrap .socials p {
+        font-size: 20px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .wrap {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .wrap form {
+        flex-basis: 50%;
+    }
+
+    .wrap .socials {
+        flex-basis: 50%;
+        margin: 0;
+        transform: translateX(0);
+    }
+
+    .contact h1 {
+        font-size: 28px;
+        margin: 10px;
+    }
+
+    .wrap form input {
+        font-size: 20px;
+        height: 40px;
+    }
+
+    .wrap form textarea {
+        font-size: 20px;
+        height: 140px;
+    }
+
+    .wrap form button {
+        font-size: 24px;
+        line-height: 48px;
+    }
+
+    .wrap .socials p {
+        font-size: 24px;
+        margin: 50px 0 0 100px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    .contact {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .wrap .socials p {
+        font-size: 30px;
+    }
+}
+
+
+
+/* Stopka */
+
+footer {
+    background-color: yellowgreen;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+}
+
+@media (orientation:portrait) and (min-width:360px) {
+    footer {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+@media (orientation:portrait) and (min-width:768px) {
+    footer {
+        margin-top: 40px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@media (orientation: landscape) and (min-width:1280px) {
+    footer {
+        margin-top: 40px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
